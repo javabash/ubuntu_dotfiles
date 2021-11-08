@@ -1,0 +1,99 @@
+==================
+Building Sentences
+==================
+d2w # Delete two words
+cis # Delete in sentence
+dip # Delete inside paragraph
+ct< # Change text t(o) open bracket.
+dt. # Delete to next period.
+y2; # Copy (yank) to next semicolon.
+
+===================
+Getting Things Done
+===================
+:saveas ~/some/path/ # Save your file to that location vim
+ZZ # In normal mode, faster wq
+/ ?  # Search fowards / backwards
+f{char} # Jump forward and land on character
+t{char} # Jump to (before char)
+* # Search for  other instances of word under cursor
+n # Next instance of search term
+N # Previous instance of search term
+
+=============
+Moving Around
+=============
+0 # Move to beginning of line
+$ # Move to end of line
+^ # Move to first non-blank char in line
+t" # Jump to right before next quotes
+f" # Jump on next quotes
+w # Move forward one word
+b # Move back one word
+e # Move to end of word
+W # Move forward one big word (ignore delimiters)
+B # Move back one big word (ignore delimiters)
+NOTE:  The uppercase of a specific command after has more powerful effect
+() # Move forward/backward by one sentence
+{} # Move forward/backward by one paragraph
+H # Move to top (head) of screen
+M # Move to middle of screen
+L # Move to end of screen
+gg # Go to top of file
+G # Go to end of file
+^U # Move up 1/2 screen
+^D # Move down 1/2 screen
+^F # Page down
+^B # Page up
+Ctrl-i # Jump to previous location
+Ctrl-o # Jumb back to where you were
+
+^ 
+
+
+==================
+Terminal Shortcuts
+==================
+
+Ctrl-Alt T - Open Terminal
+Ctrl D - Close terminal
+Ctrl C - End currently running command
+Ctrl l - Clear screen
+
+Ctrl a - Cursor to beginning of line
+Ctrl e - Cursor to End of Line
+Ctrl f - Cursor fwd by one char
+Ctrl b - Cursor bkwd one char
+Ctrl d - Delete char at cursor
+Ctrl t - Exchange current 
+Ctrl u - Erases complete line
+
+
+Alt f  - Cursor fwd by one word
+Alt b - Cursor bkwd one char
+Alt t - Exchange current word with preceding one
+Alt l - Move cursor back one char
+Alt u - Convert chars of word to lowercase from cursor
+Alt b - Convert chars of word to uppercase from cursor
+
+========================
+VIM Commands | Shortcuts
+========================
+
+g = gambol (jump, frolic)
+
+a = append
+
+O = open new line above current line
+o = open new line below current line - drop into insert mode
+
+INSERT MODE
+CTRL + CMD - Commands in insert mode
+
+EDITING
+gU - end of motion
+r - replace single char
+R - replace more than one until ESC is pressed.
+
+
+
