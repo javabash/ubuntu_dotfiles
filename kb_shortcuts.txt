@@ -8,6 +8,7 @@ ct< # Change text t(o) open bracket.
 dt. # Delete to next period.
 y2; # Copy (yank) to next semicolon.
 
+
 ===================
 Getting Things Done
 ===================
