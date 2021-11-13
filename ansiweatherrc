@@ -1,0 +1,4 @@
+location:Bothell, US
+fetch_cmd:curl -sf
+units:imperial
+show_daylight:true

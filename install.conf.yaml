@@ -9,6 +9,11 @@
     ~/.zshrc: zshrc
     ~/.gitconfig: gitconfig
     ~/.config: config
+    ~/.oh-my-zsh: oh-my-zsh
+    ~/.zshenv: zshenv
+    ~/.tmux.conf: tmux.conf
+    ~/.ansiweatherrc: ansiweatherrc
+
 
 - create:
     - ~/Work
