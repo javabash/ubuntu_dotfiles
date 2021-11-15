@@ -8,7 +8,7 @@ fi
 # Set up the prompt
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=off 
-
+eval $(thefuck --alias fix)
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
@@ -22,6 +22,9 @@ alias exa='exa -laFh'
 alias sz='source ~/.zshrc'
 alias nz='nvim ~/.zshrc'
 alias ni='nvim ~/.config/nvim/init.vim'
+alias pbcopy=’xclip -selection clipboard’
+alias pbpaste=’xclip -selection clipboard -o’
+
 # export TERM="xterm-256color"
 echo "Executing .zshrc"
 # export EXA_COLORS="da=1;36:fi=1;37"
@@ -207,3 +210,5 @@ function exists() {
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+source /home/philt/.config/broot/launcher/bash/br
