@@ -1,4 +1,14 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Set up the prompt
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=off 
+
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
@@ -12,10 +22,10 @@ alias exa='exa -laFh'
 alias sz='source ~/.zshrc'
 alias nz='nvim ~/.zshrc'
 alias ni='nvim ~/.config/nvim/init.vim'
-export TERM="xterm-256color"
+# export TERM="xterm-256color"
 echo "Executing .zshrc"
-export EXA_COLORS="da=1;36:fi=1;37"
-export LS_COLORS="fi=36:di=1;32:gm=1;37:ex=1;32"
+# export EXA_COLORS="da=1;36:fi=1;37"
+# export LS_COLORS="fi=36:di=1;32:gm=1;37:ex=1;32"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -59,15 +69,14 @@ export ZSH="/home/philt/dotfiles/oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-# ZSH_THEME="powerlevel9k/powerlevel9k"
-ZSH_THEME="af-magic"
+ZSH_THEME="powerlevel10k/powerlevel10k"
+#
+# ZSH_THEME="af-magic"
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs)
-# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
 
 # PROMPT='%n~$%{$fg_bold[green]%}%p %{$fg_bold[green]%}'
 # PROMPT='$fg_bold[blue]%1~$fg_bold[green]%} %L %# '
@@ -194,3 +203,7 @@ function exists() {
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
