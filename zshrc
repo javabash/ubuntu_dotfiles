@@ -14,7 +14,8 @@ eval $(thefuck --alias fix)
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
-alias tree='tree -C -L 2'
+alias lu="wkdict"
+alias tree='broot'
 alias ls='exa -laFh'
 alias tldr='/usr/local/bin/tldr'
 alias ks='cat kb_shortcuts.txt | less'
@@ -22,8 +23,8 @@ alias exa='exa -laFh'
 alias sz='source ~/.zshrc'
 alias nz='nvim ~/.zshrc'
 alias ni='nvim ~/.config/nvim/init.vim'
-alias pbcopy=’xclip -selection clipboard’
-alias pbpaste=’xclip -selection clipboard -o’
+alias pbcopy=’clip.exe’
+alias pbpaste=’clip.exe’
 
 # export TERM="xterm-256color"
 echo "Executing .zshrc"
@@ -31,7 +32,7 @@ echo "Executing .zshrc"
 # export LS_COLORS="fi=36:di=1;32:gm=1;37:ex=1;32"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+export PATH=/home/philt/.cargo/bin:$PATH
 # Set Variables
 # # Syntax highlight for man pages using bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
@@ -203,6 +204,10 @@ function mg() {
 }
 function exists() {
   command -v $1 >/dev/null 2>&1
+}
+
+function cht() {
+  curl cheat.sh/$1
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
