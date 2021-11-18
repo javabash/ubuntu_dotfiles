@@ -33,6 +33,7 @@ echo "Executing .zshrc"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/home/philt/.cargo/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
 # Set Variables
 # # Syntax highlight for man pages using bat
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
@@ -209,6 +210,21 @@ function exists() {
 function cht() {
   curl cheat.sh/$1
 }
+
+function dr() {
+
+    if [[ $(wget https://raw.githubusercontent.com/tldr-pages/tldr/main/pages/common/$1.md -O-) ]] 2>/dev/null
+      then glow https://raw.githubusercontent.com/tldr-pages/tldr/main/pages/common/$1.md | less 
+      elif
+	echo "Checking eg..."
+	if [[ $(eg $1) ]] #2>/dev/null
+	  then eg $1 | less
+      else 
+	echo "No TLDR EG files for $1"
+    fi
+}
+
+
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
